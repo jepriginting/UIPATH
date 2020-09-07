@@ -169,7 +169,7 @@
           <av:PointCollection x:Key="ConnectorLocation">330,214.4 330,265.6</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="create folder" sap:VirtualizedContainerService.HintSize="814.4,1249.6" sap2010:WorkflowViewState.IdRef="Sequence_81">
+      <Sequence DisplayName="create folder" sap:VirtualizedContainerService.HintSize="814.4,1147.2" sap2010:WorkflowViewState.IdRef="Sequence_81">
         <Sequence.Variables>
           <Variable x:TypeArguments="s:String[]" Default="[{&quot;from&quot;,&quot;destination&quot;}]" Name="folderName" />
           <Variable x:TypeArguments="s:String[]" Default="[{&quot;a.pdf&quot;,&quot;b.pdf&quot;,&quot;a.xlsx&quot;,&quot;b.xlsx&quot;,&quot;c.xlsx&quot;,&quot;a.txt&quot;,&quot;b.txt&quot;}]" Name="fileName" />
@@ -179,13 +179,13 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="772.8,1156.8" sap2010:WorkflowViewState.IdRef="ForEach`1_32" Values="[folderName]">
+        <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="772.8,1054.4" sap2010:WorkflowViewState.IdRef="ForEach`1_32" Values="[folderName]">
           <ui:ForEach.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="737.6,1022.4" sap2010:WorkflowViewState.IdRef="Sequence_80">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="737.6,920" sap2010:WorkflowViewState.IdRef="Sequence_80">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -193,7 +193,6 @@
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="696,80.8" sap2010:WorkflowViewState.IdRef="CreateDirectory_17" Path="[&quot;D:\testing\&quot;+item.ToString]" />
                 <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="696,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[item.ToString]" />
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="696,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[item.ToString]" />
                 <If Condition="[item.ToString = &quot;from&quot;]" sap:VirtualizedContainerService.HintSize="696,604" sap2010:WorkflowViewState.IdRef="If_14">
                   <If.Then>
                     <Sequence sap:VirtualizedContainerService.HintSize="452,454.4" sap2010:WorkflowViewState.IdRef="Sequence_79">
